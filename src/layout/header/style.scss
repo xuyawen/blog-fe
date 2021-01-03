@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 1);
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    .nav-item {
+      margin-left: 20px;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: 1px solid #FFFFFF;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+  }
+}

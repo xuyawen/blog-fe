@@ -1,0 +1,99 @@
+// 非标准盒模式：width 与 height 包括 padding 与 border，不包括 margin
+* {
+  box-sizing: border-box;
+  outline: none;
+  word-break: break-word;
+}
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  // 字体清晰度设置，只作用于 OSX 下高分屏
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  min-height: 100vh;
+}
+
+a {
+  color: $link-primary;
+  text-decoration: none;
+  /*正常的未被访问过的链接*/
+  &:link {
+    text-decoration: none;
+  }
+  /*已经访问过的链接*/
+  &:visited {
+    text-decoration: none;
+  }
+  /*鼠标划过(停留)的链接*/
+  &:hover {
+    text-decoration: none;
+  }
+  /* 正在点击的链接*/
+  &:active {
+    text-decoration: none;
+  }
+}
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+// 禁止图片拖动
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+// 去除输入框的外部高亮
+input,
+button,
+textarea {
+  outline: 0;
+}
+
+
+// 解决 Font Boosting 问题
+p {
+  max-height: 100%;
+}
+
+//按钮禁用样式以及移入样式设置
+button {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 0.2667rem;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 0.6667rem;
+  -webkit-box-shadow: inset 0 0 0.3333rem rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 0.3333rem rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 0.3333rem rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 0.3333rem rgba(0,0,0,0.2);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
